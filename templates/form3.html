@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Virtual Covid-19 Test</title>
+</head>
+<body>
+
+
+<form action="{{ url_for('run2')}}" method="post">
+<br>
+<label>Have you been experiencing chest pain ? </label>
+<input type="radio" name="chest" value="1">
+<label for="chest">Yes</label>
+<input type="radio"  name="chest" value="0">
+<label for="chest">No</label><br>
+
+<form action="{{ url_for('run2')}}" method="post">
+<br>
+<label>Have you been experiencing breathing issues ? </label>
+<input type="radio" name="breathing" value="1">
+<label for="breathing">Yes</label>
+<input type="radio"  name="breathing" value="0">
+<label for="breathing">No</label><br>
+
+<button type="submit">Login</button>
+
+</body>
+</html>
+
+
+
+{% endblock %}

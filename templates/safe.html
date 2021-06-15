@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content%}
+
+
+
+
+<center>
+	<h1> Congratulations !</h1>
+<img src="{{url_for('static',filename ='images/safe.png')}}" width="220" height="220"/>
+
+<h2> Your response shows you don't have Covid-19 Symptoms.</h2>
+<br>
+<h3>"{{text}}"</h3>	
+
+
+</center>
+
+
+
+
+
+
+
+{% endblock %}

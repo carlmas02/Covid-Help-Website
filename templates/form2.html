@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block content%}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Virtual Covid-19 Test</title>
+</head>
+<body>
+
+<form action="{{ url_for('run')}}" method="post">
+<br>
+<label>Have you been having a runny nose ? </label>
+<input type="radio" name="nose" value="1">
+<label for="nose">Yes</label>
+<input type="radio"  name="nose" value="0">
+<label for="nose">No</label><br>
+
+<form action="{{ url_for('run')}}" method="post">
+<br>
+<label>Have you been experiencing nausea ? </label>
+<input type="radio" name="nausea" value="1">
+<label for="nausea">Yes</label>
+<input type="radio"  name="nausea" value="0">
+<label for="nausea">No</label><br>
+
+<form action="{{ url_for('run')}}" method="post">
+<br>
+<label>Have you been experiencing loss of smell ? </label>
+<input type="radio" name="smell" value="1">
+<label for="smell">Yes</label>
+<input type="radio"  name="smell" value="0">
+<label for="smell">No</label><br>
+
+<button type="submit">Login</button>
+
+
+</body>
+</html>
+
+
+
+{% endblock %}

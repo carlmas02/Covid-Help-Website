@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Virtual Covid-19 Test</title>
+</head>
+<body>
+
+<form action="{{ url_for('get_form')}}" method="post">
+<label>Name</label><br>
+<input type="text" name="name" placeholder="name">
+<br><label>Age</label><br>
+<input type="text"  name="age" placeholder="age">
+
+<form action="{{ url_for('get_form')}}" method="post">
+<br>
+<label>Have you been experiencing fever ? </label>
+<input type="radio" name="fever" value="1">
+<label for="fever">Yes</label>
+<input type="radio"  name="fever" value="0">
+<label for="fever">No</label><br>
+
+<form action="{{ url_for('get_form')}}" method="post">
+<br>
+<label>Have you been coughing ? </label>
+<input type="radio" name="cough" value="1">
+<label >Yes</label>
+<input type="radio"  name="cough" value="0">
+<label >No</label><br>
+
+
+<br>
+<label>Have you been having fatigue ? </label>
+<input type="radio" name="fatigue" value="1">
+<label >Yes</label>
+<input type="radio"  name="fatigue" value="0">
+<label >No</label><br>
+
+
+<br>
+<label>Have you been having body pain ? </label>
+<input type="radio" name="bodypain" value="1">
+<label >Yes</label>
+<input type="radio"  name="bodypain" value="0">
+<label >No</label><br>
+
+
+<br>
+<label>Have you been having loss of appetite ? </label>
+<input type="radio" name="appetite" value="1">
+<label >Yes</label>
+<input type="radio"  name="appetite" value="0">
+<label >No</label><br>
+
+
+<button type="submit">Login</button>
+
+
+
+
+</body>
+</html>
+
+{%endblock %}
