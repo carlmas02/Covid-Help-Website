@@ -6,17 +6,28 @@
 
 
 <center>
-	<h1> Congratulations !</h1>
+	<h1> {{header}} !</h1>
 <img src="{{url_for('static',filename ='images/safe.png')}}" width="220" height="220"/>
 
-<h2> Your response shows you don't have Covid-19 Symptoms.</h2>
 <br>
 <h3>"{{text}}"</h3>	
 
 
 </center>
 
-
+<div class="row g-3 align-items-center">
+  <div class="col-auto">
+    <label for="inputPassword6" class="col-form-label">Password</label>
+  </div>
+  <div class="col-auto">
+    <input type="password" id="inputPassword6" class="form-control" aria-describedby="passwordHelpInline">
+  </div>
+  <div class="col-auto">
+    <span id="passwordHelpInline" class="form-text">
+      Must be 8-20 characters long.
+    </span>
+  </div>
+</div>
 
 
 

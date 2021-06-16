@@ -44,9 +44,10 @@ def get_form():
 		if resp :
 			return redirect(url_for('run'))
 		else:
+			header = "Congratulations"
 			text = "Your answers predict that you are at a low-risk for COVID-19 ,you must ensure you protect yourself and\
  ensure you are following social distancing norms. "
-			return render_template('safe.html',text=text)
+			return render_template('safe.html',text=text,header = header)
 
 	return render_template('form.html')
 
@@ -60,10 +61,11 @@ def run():
 		if resp:
 			return redirect(url_for('run2'))
 		else:
+			header = "Great"
 			text = "Your answers predict that you at a medium to high risk for COVID-19 ,we suggest that you must get \
 yourself tested. There are chances that you could be asymtomatic , so we prefer you to visit a doctor or  health-care \
              center "
-			return render_template('safe.html',text= text)
+			return render_template('safe.html',text= text,header=header)
 
 	return render_template('form2.html')
 
